@@ -4,6 +4,7 @@ import About from "../views/About.vue";
 import SingleForm from "../components/SingleForm";
 import Jobs from "../views/jobs/Jobs";
 import JobDetails from "../views/jobs/JobDetails";
+import NotFound from "../views/NotFound";
 
 const routes = [
   {
@@ -30,6 +31,17 @@ const routes = [
     path: "/jobs/:id",
     name: "JobDetails",
     component: JobDetails,
+    props: true,
+  },
+  {
+    path: "/all-jobs",
+    redirect: "/jobs",
+  },
+  // catch all 404 Page Not Found
+  {
+    path: "/:catchAll(.*)",
+    name: "NotFound",
+    component: NotFound,
   },
 ];
 
