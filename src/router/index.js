@@ -3,6 +3,7 @@ import Home from "../views/Home.vue";
 import About from "../views/About.vue";
 import SingleForm from "../components/SingleForm";
 import Jobs from "../views/jobs/Jobs";
+import JobDetails from "../views/jobs/JobDetails";
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: "/jobs",
     name: "Jobs",
     component: Jobs,
+  },
+  {
+    path: "/jobs/:id",
+    name: "JobDetails",
+    component: JobDetails,
   },
 ];
 
