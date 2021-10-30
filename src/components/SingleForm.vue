@@ -58,11 +58,11 @@ export default {
       // validate the password
       this.passwordError =
         this.password.length > 5 ? "" : "Password must be atLeast 6 chars long";
-      if(!this.passwordError){
-        console.log(this.email)
-        console.log(this.password)
-        console.log(this.age)
-        console.log(this.skills)
+      if (!this.passwordError) {
+        console.log(this.email);
+        console.log(this.password);
+        console.log(this.age);
+        console.log(this.skills);
       }
     },
   },
@@ -135,7 +135,7 @@ button {
 .submit {
   text-align: center;
 }
-.error{
+.error {
   color: #ff0062;
   margin-top: 10px;
   font-size: 0.8rem;
