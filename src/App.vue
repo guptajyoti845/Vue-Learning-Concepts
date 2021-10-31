@@ -5,12 +5,26 @@
     <router-link :to="{ name: 'Registration' }">New Account</router-link> |
     <router-link :to="{ name: 'Jobs' }">Jobs</router-link>
   </div>
+  <button @click="redirect">Redirect</button>
+  <button @click="back">Go Back</button>
+  <button @click="forward">Go Forward</button>
   <router-view></router-view>
 </template>
 
 <script>
 export default {
   name: "App",
+  methods: {
+    redirect() {
+      this.$router.push({ name: "Home" });
+    },
+    back() {
+      this.$router.back();
+    },
+    forward() {
+      this.$router.forward();
+    },
+  },
 };
 </script>
 
@@ -45,5 +59,12 @@ body {
 #nav a.router-link-exact-active {
   background: crimson;
   color: white;
+}
+button {
+  margin: 0 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background: #d4cdcd;
 }
 </style>
